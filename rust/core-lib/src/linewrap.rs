@@ -682,7 +682,6 @@ const MAX_LINEAR_DIST: usize = 20;
 
 impl<'a> MergedBreaks<'a> {
     fn new(text: &'a Rope, breaks: &'a Breaks) -> Self {
-        debug_assert_eq!(text.len(), breaks.len());
         let text = Cursor::new(text, 0);
         let soft = Cursor::new(breaks, 0);
         let total_lines =
